@@ -48,6 +48,7 @@ Derived two core performance metrics not present in the raw data:
 
 
 ROAS (Return on Ad Spend) = Revenue ÷ Spend
+
 CAC (Customer Acquisition Cost) = Spend ÷ Conversions
 
 
