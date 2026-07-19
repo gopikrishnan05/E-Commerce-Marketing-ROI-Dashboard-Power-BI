@@ -21,7 +21,24 @@ What I Did
 Started with 298 raw campaign performance records containing realistic data quality issues:
 
 Issue: Mixed date formats (4 variants, including ambiguous day/month cases)
-How I Handled It: Standardized all dates; manually resolved ambiguous cases using the known valid date range as a validation check17 duplicate campaign recordsIdentified and removed using CampaignID as the unique keyMissing Spend, Clicks, Conversions, and Revenue valuesFilled using the average value per Channel + Campaign combination, not a flat global averageInconsistent Channel text formatting (EMAIL, " Email ", hidden non-breaking spaces)Standardized using PROPER/TRIM plus a SUBSTITUTE step to catch non-printable whitespace charactersZero-conversion edge casesGuarded ROAS/CAC formulas to return 0 instead of a division error
+
+How I Handled It: Standardized all dates; manually resolved ambiguous cases using the known valid date range as a validation check
+
+Issue: 17 duplicate campaign records
+
+How I Handled It:Identified and removed using CampaignID as the unique key
+
+Issue: Missing Spend, Clicks, Conversions, and Revenue values
+
+How I Handled It: Filled using the average value per Channel + Campaign combination, not a flat global average
+
+Issue: Inconsistent Channel text formatting (EMAIL, " Email ", hidden non-breaking spaces)
+
+How I Handled It: Standardized using PROPER/TRIM plus a SUBSTITUTE step to catch non-printable whitespace characters
+
+Issue: Zero-conversion edge cases
+
+How I Handled It: Guarded ROAS/CAC formulas to return 0 instead of a division error
 
 Result: 298 → 281 clean, deduplicated records.
 
